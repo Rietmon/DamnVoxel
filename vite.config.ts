@@ -69,7 +69,7 @@ export default defineConfig({
     environment: 'node',
     coverage: {
       provider: 'v8',
-      include: ['src/core/**', 'src/kernels/**', 'src/formats/**', 'src/io/**'],
+      include: ['src/{core,kernels,formats,io}/**/*.ts'],
       exclude: ['**/*.test.ts'],
       // The data core is what must never break; keep it thoroughly tested.
       thresholds: { lines: 90, functions: 90, branches: 85 },
