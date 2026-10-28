@@ -1,0 +1,28 @@
+DamnVoxel — browser voxel editor
+Copyright (C) 2026 Ilya
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License
+for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program (COPYING). If not, see
+<https://www.gnu.org/licenses/>.
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+
+Parts under other licences
+--------------------------
+- src/formats (file formats on their own: .vox chunks, glTF/GLB, OBJ, PLY,
+  STL, GIF, PNG, ZIP, .hdr, palettes): MIT, see src/formats/LICENSE.
+  src/io, which turns .vox into the editor's scene and back, is part of the
+  editor and under the AGPL like the rest.
+- docs/formats.md (the description of the formats): Creative Commons
+  Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/
+- Third-party data: see NOTICE.

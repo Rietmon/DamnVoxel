@@ -1,0 +1,106 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "includes": ["**", "!**/dist", "!**/dev-dist", "!**/coverage", "!**/*.md", "!**/*.vox"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "lineEnding": "lf"
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "always",
+      "trailingCommas": "all",
+      "arrowParentheses": "always"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "style": {
+        "noNonNullAssertion": "off",
+        "useConst": "error",
+        "useImportType": "error",
+        "noParameterAssign": "off"
+      },
+      "complexity": {
+        "noForEach": "off"
+      },
+      "suspicious": {
+        "noAssignInExpressions": "off"
+      }
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.svelte"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useConst": "off",
+            "useImportType": "off"
+          },
+          "correctness": {
+            "noUnusedVariables": "off",
+            "noUnusedImports": "off"
+          }
+        }
+      },
+      "formatter": {
+        "enabled": false
+      },
+      "assist": {
+        "enabled": false
+      }
+    },
+    {
+      "includes": ["src/core/**", "src/kernels/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedGlobals": {
+              "level": "error",
+              "options": {
+                "deniedGlobals": {
+                  "window": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "document": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "navigator": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "self": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "globalThis": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "localStorage": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "sessionStorage": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "indexedDB": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "requestAnimationFrame": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "cancelAnimationFrame": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "performance": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "HTMLElement": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "WebGL2RenderingContext": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "Worker": "core and kernels must not depend on the browser (docs/architecture.md)",
+                  "fetch": "core and kernels must not depend on the browser (docs/architecture.md)"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

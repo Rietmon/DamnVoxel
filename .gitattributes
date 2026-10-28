@@ -1,0 +1,9 @@
+# All text files are stored and checked out with LF, on every OS.
+* text=auto eol=lf
+
+*.vox binary
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff2 binary
+*.bat text eol=crlf

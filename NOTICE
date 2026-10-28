@@ -1,0 +1,13 @@
+DamnVoxel
+Copyright (C) 2026 Ilya
+
+Third-party data
+----------------
+- Default palette (src/core/default-palette.ts): the 256 colours of the
+  MagicaVoxel default palette, by ephtracy, kept so that .vox files without a
+  palette read the same as in MagicaVoxel. MagicaVoxel is not affiliated with
+  this project. The permission to use these values has not been confirmed in
+  writing; a palette of the project's own would remove the question.
+
+Dependencies are listed in package.json; each is under its own licence
+(MIT or similar), found in node_modules after installation.

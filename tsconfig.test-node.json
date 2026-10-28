@@ -1,0 +1,15 @@
+{
+  "//": "Node code that uses the sources: *.node.test.ts and scripts that load src. Kept apart so Node globals never leak into browser code.",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2023"],
+    "types": ["node"],
+    "allowImportingTsExtensions": true
+  },
+  "include": [
+    "src/**/*.node.test.ts",
+    "scripts/make-vox-fixtures.ts",
+    "scripts/make-vox-samples.ts"
+  ],
+  "exclude": []
+}

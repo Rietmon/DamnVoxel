@@ -1,0 +1,9 @@
+*.local
+.DS_Store
+Thumbs.db
+coverage/
+dev-dist/
+dist/
+node_modules/
+public/guide/
+.claude/
