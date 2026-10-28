@@ -51,4 +51,4 @@ For a production build, `pnpm build` writes a static site to `dist/` (with the u
 - The format description in [docs/formats.md](docs/formats.md) is under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - Third-party data: see [NOTICE](NOTICE).
 
-DamnVoxel is not affiliated with MagicaVoxel. The `.vox` format and the default palette are by ephtracy.
+DamnVoxel is not affiliated with MagicaVoxel. The `.vox` format and the default palette are by ephtracy; the palette is used under the MIT licence of `ephtracy/voxel-model` (see `NOTICE`).

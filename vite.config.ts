@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'vitest/config';
@@ -9,6 +10,18 @@ export default defineConfig({
   base: './',
   plugins: [
     svelte(),
+    {
+      // Third-party notices travel with every copy of the site (the default palette is MIT).
+      name: 'notice',
+      apply: 'build',
+      generateBundle() {
+        this.emitFile({
+          type: 'asset',
+          fileName: 'NOTICE.txt',
+          source: readFileSync('NOTICE', 'utf8'),
+        });
+      },
+    },
     VitePWA({
       // The page never reloads by itself: an update waits for the user so no work is lost.
       registerType: 'prompt',

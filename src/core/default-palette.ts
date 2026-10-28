@@ -1,5 +1,5 @@
 /**
- * MagicaVoxel default palette, copied from the .vox specification (ephtracy/voxel-model,
+ * MagicaVoxel default palette, copied from the .vox specification (ephtracy/voxel-model, MIT licence,
  * MagicaVoxel-file-format-vox.txt, section 8). Entry i is the colour of voxel index i, entry 0 is
  * empty. Values are 0xAABBGGRR, which is the packed RGBA layout used by the palette.
  */
